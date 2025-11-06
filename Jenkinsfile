@@ -1,7 +1,9 @@
 @Library('my-shared-library') _
 pipeline {
     agent any
-
+    environment {
+        RECIPIENT_EMAIL = 'vamsi143osg@gmail.com'  // dynamic variable
+    }
     stages {
         stage('Build') {
             steps {
