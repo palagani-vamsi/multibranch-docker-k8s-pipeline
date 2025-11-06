@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Bus service logo from the internet -->
+            <img src="https://www.freepnglogos.com/uploads/bus-png/bus-png-transparent-images-png-only-22.png" alt="Bus Logo" width="150">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#routes">Routes</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <!-- Hero background image of a bus -->
+        <div class="hero-content">
+            <h1>Welcome to BusEase</h1>
+            <p>Book your bus tickets online and travel with ease!</p>
+            <a href="#routes" class="btn">Explore Routes</a>
+        </div>
+    </section>
+
+    <section id="routes" class="routes">
+        <h2>Popular Routes</h2>
+        <div class="route-grid">
+            <div class="route-card">
+                <!-- Bus route image -->
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Route 1">
+                <h3>New York to Boston</h3>
+                <p>Duration: 4h 30m | Price: $25</p>
+                <button class="btn" onclick="bookTicket('New York to Boston')">Book Now</button>
+            </div>
+            <div class="route-card">
+                <!-- Bus route image -->
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Route 2">
+                <h3>Los Angeles to San Francisco</h3>
+                <p>Duration: 6h 15m | Price: $35</p>
+                <button class="btn" onclick="bookTicket('Los Angeles to San Francisco')">Book Now</button>
+            </div>
+            <div class="route-card">
+                <!-- Bus route image -->
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" alt="Route 3">
+                <h3>Chicago to Detroit</h3>
+                <p>Duration: 5h 45m | Price: $30</p>
+                <button class="btn" onclick="bookTicket('Chicago to Detroit')">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <h2>Book Your Tickets</h2>
+        <form id="booking-form">
+            <label for="route">Select Route:</label>
+            <select id="route" name="route">
+                <option value="New York to Boston">New York to Boston</option>
+                <option value="Los Angeles to San Francisco">Los Angeles to San Francisco</option>
+                <option value="Chicago to Detroit">Chicago to Detroit</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Select Time:</label>
+            <select id="time" name="time">
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+            </select>
+
+            <label for="seats">Number of Seats:</label>
+            <input type="number" id="seats" name="seats" min="1" max="10">
+
+            <button type="submit" class="btn">Confirm Booking</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2023 BusEase. All rights reserved.</p>
+        <p>Contact us: info@busease.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
