@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transaction App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Image -->
+        <div class="logo">
+            <img src="https://via.placeholder.com/150" alt="Bank Logo">
+        </div>
+
+        <h1>Bank Transaction App</h1>
+
+        <!-- Transaction Form -->
+        <div class="transaction-form">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+
+            <label for="recipient">Recipient:</label>
+            <input type="text" id="recipient" placeholder="Enter recipient's name">
+
+            <label for="account">Account Number:</label>
+            <input type="text" id="account" placeholder="Enter account number">
+
+            <button onclick="processTransaction()">Send Money</button>
+        </div>
+
+        <!-- Transaction Status -->
+        <div id="transaction-status"></div>
+
+        <!-- Additional Images -->
+        <div class="images">
+            <h2>Our Partners</h2>
+            <img src="https://via.placeholder.com/100" alt="Partner 1">
+            <img src="https://via.placeholder.com/100" alt="Partner 2">
+            <img src="https://via.placeholder.com/100" alt="Partner 3">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
