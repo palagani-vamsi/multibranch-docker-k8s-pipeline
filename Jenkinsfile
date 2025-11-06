@@ -1,3 +1,4 @@
+@Library('my-shared-library') _
 pipeline {
     agent any
 
@@ -25,6 +26,17 @@ pipeline {
             steps {
                 sh 'docker run -itd --name bankApp -p 1113:80 palaganivamsi/bank:1.0'
             }
+        }
+    }
+    post {
+        always {
+            notifyBuild('completed', env.RECIPIENT_EMAIL)
+        }
+        success {
+            notifyBuild('successful', env.RECIPIENT_EMAIL)
+        }
+        failure {
+            notifyBuild('failed', env.RECIPIENT_EMAIL)
         }
     }
 }
