@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Working cinema logo from the internet -->
+            <img src="https://www.freepnglogos.com/uploads/cinema-logo-png/cinema-logo-stack-of-movie-reel-and-ticket-33.png" alt="Cinema Logo" width="150">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <!-- Hero background image from the internet -->
+        <div class="hero-content">
+            <h1>Welcome to CineWorld</h1>
+            <p>Book your favorite movies online and enjoy the show!</p>
+            <a href="#movies" class="btn">Explore Movies</a>
+        </div>
+    </section>
+
+    <section id="movies" class="movies">
+        <h2>Now Showing</h2>
+        <div class="movie-grid">
+            <div class="movie-card">
+                <!-- Movie poster image from the internet -->
+                <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg" alt="Movie 1">
+                <h3>Avengers: Endgame</h3>
+                <p>Genre: Action | Duration: 3h 2m</p>
+                <button class="btn" onclick="bookTicket('Avengers: Endgame')">Book Now</button>
+            </div>
+            <div class="movie-card">
+                <!-- Movie poster image from the internet -->
+                <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="Movie 2">
+                <h3>Joker</h3>
+                <p>Genre: Drama | Duration: 2h 2m</p>
+                <button class="btn" onclick="bookTicket('Joker')">Book Now</button>
+            </div>
+            <div class="movie-card">
+                <!-- Movie poster image from the internet -->
+                <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_FMjpg_UX1000_.jpg" alt="Movie 3">
+                <h3>Avengers: Infinity War</h3>
+                <p>Genre: Action | Duration: 2h 29m</p>
+                <button class="btn" onclick="bookTicket('Avengers: Infinity War')">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <h2>Book Your Tickets</h2>
+        <form id="booking-form">
+            <label for="movie">Select Movie:</label>
+            <select id="movie" name="movie">
+                <option value="Avengers: Endgame">Avengers: Endgame</option>
+                <option value="Joker">Joker</option>
+                <option value="Avengers: Infinity War">Avengers: Infinity War</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Select Time:</label>
+            <select id="time" name="time">
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+            </select>
+
+            <label for="seats">Number of Seats:</label>
+            <input type="number" id="seats" name="seats" min="1" max="10">
+
+            <button type="submit" class="btn">Confirm Booking</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2023 CineWorld. All rights reserved.</p>
+        <p>Contact us: info@cineworld.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
