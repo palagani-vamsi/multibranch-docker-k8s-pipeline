@@ -23,7 +23,7 @@ pipeline {
         }
         stage ("Deploy") {
             steps {
-                sh 'docker run -itd --name bankAPP -p 1111:80 palaganivamsi/bank:1.0'
+                sh 'docker run -itd --name bankAPP -p 1112:80 palaganivamsi/bank:1.0'
             }
         }
     }
